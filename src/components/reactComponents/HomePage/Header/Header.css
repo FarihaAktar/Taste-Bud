@@ -1,8 +1,7 @@
 header{
-    border: 1px solid red;
     min-height: 650px;
     position: relative;
-    background-color: #433d3c;
+    background-color: #4e3620;
 }
 
 .header-img{
@@ -12,7 +11,6 @@ header{
     
 }
 .header-detail{
-    border: 1px solid red;
     position: absolute;
     top: 300px;
     left: 0;
@@ -34,7 +32,7 @@ header{
     border-radius: 50%;
     text-align: center;
     margin: 20px auto;
-    background-color: #433d3c;
+    background-color: #4e3620;
 }
 .header-logo{
     font-size: 40px;
