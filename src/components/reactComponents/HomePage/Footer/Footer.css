@@ -1,0 +1,20 @@
+.footer-section{
+    padding: 50px;
+    background-color: #1b1a17;
+}
+.footer{
+    width: 20%;
+    margin: 0 auto;
+}
+.footer a{
+    text-decoration: none;
+}
+.social-media{
+    font-size: 35px;
+    margin-left: 35px;
+    color: rgb(46, 46, 243);
+    cursor: pointer;
+}
+.social-media:hover{
+    color: #ec4646;
+}
