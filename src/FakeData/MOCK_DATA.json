@@ -1,7 +1,7 @@
 [{"id":1,"mealImageURL":"https://i.postimg.cc/cJ47DQ94/breakfast1.jpg","meal":"Breakfast","mealName":"Toast Croissant Fried Egg","detail":null,"price":15},
 {"id":2,"mealImageURL":"https://i.postimg.cc/Gtp81C8W/breakfast2.jpg","meal":"Breakfast","mealName":"Fried Egg Toast Brunch","detail":null,"price":35},
 {"id":3,"mealImageURL":"https://i.postimg.cc/bv3SVrdx/breakfast3.jpg","meal":"Breakfast","mealName":"Hot Coffee","detail":null,"price":20},
-{"id":4,"mealImageURL":"https://i.postimg.cc/9M9p6yT3/breakfast4.jpg","meal":"Breakfast","mealName":"Breakfast Sandwich","detail":null,"price":15},
+{"id":4,"mealImageURL":"https://i.postimg.cc/9M9p6yT3/breakfast4.jpg","meal":"Breakfast","mealName":"Sandwich","detail":null,"price":15},
 {"id":5,"mealImageURL":"https://i.postimg.cc/yYGDZttP/breakfast5.jpg","meal":"Breakfast","mealName":"Pasta with prawn","detail":null,"price":41},
 {"id":6,"mealImageURL":"https://i.postimg.cc/X79vrqKV/lunch1.jpg","meal":"Lunch","mealName":"Fried Chicken With Vegetable","detail":null,"price":17},
 {"id":7,"mealImageURL":"https://i.postimg.cc/GhRCSQYC/lunch2.jpg","meal":"Lunch","mealName":"Healthy Meal","detail":null,"price":47},
