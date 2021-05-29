@@ -8,6 +8,7 @@ import MakeAdmin from './components/Admin/MakeAdmin/MakeAdmin';
 import Login from './components/Login/Login';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Admin from './components/Admin/Admin';
+import { MealReducer } from './components/Redux/Reducers/MealReducer';
 export const UserContext = createContext()
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
@@ -35,9 +36,15 @@ function App() {
           <PrivateRoute path="/admin">
             <Admin />
           </PrivateRoute>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/meal/:mealId" component={MealReducer} />   
 
         </Switch>
       </Router>
+
+
+
+
     </UserContext.Provider>
   );
 }
