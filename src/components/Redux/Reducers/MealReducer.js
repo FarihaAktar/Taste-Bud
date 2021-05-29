@@ -41,7 +41,8 @@ export const MealReducer = (state = initialState, action)=>{
                 const newState = {
                     ...state,
                     dinnerMenu : [],
-                    lunchMenu: []
+                    lunchMenu: [],
+                    setMenu: []
                 };
                 return newState;
             }
@@ -49,7 +50,8 @@ export const MealReducer = (state = initialState, action)=>{
                 const newState = {
                     ...state,
                     dinnerMenu : [],
-                    breakfastMenu: []
+                    breakfastMenu: [],
+                    setMenu: []
                 };
                 return newState;
             }
@@ -57,7 +59,8 @@ export const MealReducer = (state = initialState, action)=>{
                 const newState = {
                     ...state,
                     lunchMenu : [],
-                    breakfastMenu: []
+                    breakfastMenu: [],
+                    setMenu: []
                 };
                 return newState;
             }

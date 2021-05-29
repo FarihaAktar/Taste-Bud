@@ -1,17 +1,17 @@
-.breakfast-image{
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-}
-.breakfast-meal{
+.all-meal{
     padding: 10px;
     cursor: pointer;
     border: 1px solid rgb(189, 189, 189);
 }
-.breakfast-meal:hover{
+.all-meal:hover{
     box-shadow: 7px 7px 30px rgb(165, 165, 165);
 }
-.breakfast-meal a{
+.all-meal a{
     text-decoration: none;
     color: black;
+}
+.all-meal-img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
 }
