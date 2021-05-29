@@ -6,6 +6,8 @@ import AddService from './components/Admin/AddService/AddService';
 import ManageService from './components/Admin/ManageService/ManageService';
 import MakeAdmin from './components/Admin/MakeAdmin/MakeAdmin';
 import Login from './components/Login/Login';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Admin from './components/Admin/Admin';
 export const UserContext = createContext()
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
@@ -21,15 +23,18 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/addService">
+          <PrivateRoute path="/addService">
             <AddService />
-          </Route>
-          <Route path="/manageService">
+          </PrivateRoute>
+          <PrivateRoute path="/manageService">
             <ManageService />
-          </Route>
-          <Route path="/makeAdmin">
+          </PrivateRoute>
+          <PrivateRoute path="/makeAdmin">
             <MakeAdmin />
-          </Route>
+          </PrivateRoute>
+          <PrivateRoute path="/admin">
+            <Admin />
+          </PrivateRoute>
 
         </Switch>
       </Router>

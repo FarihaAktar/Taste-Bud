@@ -12,7 +12,7 @@ const AddService = () => {
         newInfo[e.target.name] = e.target.value;
         setInfo(newInfo);
     }
-    console.log(info.title, info.description);
+    // console.log(info.title, info.description);
 
     const handleFileChange = (e) => {
         const newFile = e.target.files[0];

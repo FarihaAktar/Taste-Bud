@@ -32,7 +32,7 @@ const Login = () => {
             success: false,
         }
     )
-    console.log(user)
+    // console.log(user)
     const googleProvider = new firebase.auth.GoogleAuthProvider();
     const fbProvider = new firebase.auth.FacebookAuthProvider();
 
@@ -83,7 +83,7 @@ const Login = () => {
             });
     }
 
-    console.log(user)
+    // console.log(user)
 
     const handleBlur = (event) => {
         let isFieldValid = true;
@@ -263,11 +263,11 @@ const Login = () => {
                             <span class="p-4">Continue with Google</span>
                         </button>
                     </Form.Group>
-                    <Form.Group>
+                    {/* <Form.Group>
                         <button onClick={handleFbSignIn} type="button" class="btn btn-outline-success"><FontAwesomeIcon icon={faFacebook} />
                             <span class="p-3">Continue with Facebook</span>
                         </button>
-                    </Form.Group>
+                    </Form.Group> */}
 
                 </Form>
             </div>
