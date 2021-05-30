@@ -8,7 +8,8 @@ import MakeAdmin from './components/Admin/MakeAdmin/MakeAdmin';
 import Login from './components/Login/Login';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Admin from './components/Admin/Admin';
-import { MealReducer } from './components/Redux/Reducers/MealReducer';
+import MealDetail from './components/reactComponents/MealDetail/MealDetail';
+import Checkout from './components/Checkout/Checkout';
 export const UserContext = createContext()
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
@@ -20,7 +21,6 @@ function App() {
           <Route exact path="/">
             <HomePage />
           </Route>
-
           <Route path="/login">
             <Login />
           </Route>
@@ -36,8 +36,8 @@ function App() {
           <PrivateRoute path="/admin">
             <Admin />
           </PrivateRoute>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/meal/:mealId" component={MealReducer} />   
+          <Route path="/meal/:mealId" component={MealDetail} />   
+          <PrivateRoute path="/order/:id" component={Checkout} />   
 
         </Switch>
       </Router>
