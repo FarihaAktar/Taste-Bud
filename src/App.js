@@ -13,7 +13,7 @@ import Checkout from './components/Checkout/Checkout';
 export const UserContext = createContext()
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
-  console.log('data is ', loggedInUser);
+
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
@@ -38,12 +38,8 @@ function App() {
           </PrivateRoute>
           <Route path="/meal/:mealId" component={MealDetail} />   
           <PrivateRoute path="/order/:id" component={Checkout} />   
-
         </Switch>
       </Router>
-
-
-
 
     </UserContext.Provider>
   );

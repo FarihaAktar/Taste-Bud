@@ -30,9 +30,3 @@ export const removeMenu = (payload) => {
     }
 }
 
-export const selectedMeal = (payload) =>{
-    return{
-        type: "SELECTED_MEAL",
-        payload: payload
-    }
-}
