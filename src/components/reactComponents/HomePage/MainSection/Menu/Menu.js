@@ -15,50 +15,31 @@ const Menu = () => {
         return state.meals.setMenu
     })
     useEffect(() => dispatch(setMeal(fakeData)), [dispatch])
-    // const [menu, setMenu] = useState([])
-    // const [breakfastData, setBreakfastData] = useState([])
-    // const [lunchData, setLunchData] = useState([])
-    // const [dinnerData, setDinnerData] = useState([])
+  
 
 
     const handleMeal = (food) => {
-        // console.log(fakeData)
-        // dispatch(setMeal(fakeData))
+
         if (food === "Breakfast") {
-            // let dayMeal = [...breakfastData]
-            // let dayMeal = [...menu]
+
             let dayMeal = fakeData.filter(meal => meal.meal === food);
-            // setMenu(dayMeal);
-            // setBreakfastData(dayMeal)
+
             dispatch(removeMenu(dayMeal[0]))
             dispatch(setBreakfastMenu(dayMeal));
-            // setLunchData([]);
-            // setDinnerData([])
-            // console.log(breakfastData)
         }
         if (food === "Lunch") {
-            // let lunchMeal = [...lunchData]
-            // let lunchMeal = [...menu]
             let lunchMeal = fakeData.filter(meal => meal.meal === food);
-            // setLunchData(lunchMeal);
-            // setMenu(lunchMeal);
+
             dispatch(removeMenu(lunchMeal[0]))
             dispatch(setLunchMenu(lunchMeal));
-            // setBreakfastData([]);
-            // setDinnerData([]);
-            // console.log(lunchData)
+
         }
         if (food === "Dinner") {
-            // let dinnerMeal = [...dinnerData]
-            // let dinnerMeal = [...menu]
+
             let dinnerMeal = fakeData.filter(meal => meal.meal === food);
-            // setDinnerData(dinnerMeal);
-            // setMenu(dinnerMeal);
+
             dispatch(removeMenu(dinnerMeal[0]));
             dispatch(setDinnerMenu(dinnerMeal));
-            // setBreakfastData([]);
-            // setLunchData([])
-            // console.log(dinnerData)
         }
 
     }

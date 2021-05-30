@@ -1,6 +1,6 @@
 .menu{
     display: grid;
-    grid-template-columns: repeat(3, 270px);
+    grid-template-columns: repeat(3, 30%);
     grid-gap: 70px;
     width: 71%;
     margin: 50px auto;
@@ -26,4 +26,15 @@
 }
 .menu-btn:hover{
     box-shadow: 3px 3px 10px rgb(129, 129, 129);;
+}
+/* media query */
+@media only screen and (max-width: 600px){
+    .menu-btn{
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 15px;
+    }
+    .menu{
+        grid-template-columns: repeat(1, 100%);
+    }
 }

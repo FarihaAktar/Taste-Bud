@@ -7,6 +7,9 @@ nav{
 .logo{
     margin-left: 20px;
 }
+.bud{
+    color: #f54748;
+}
 .nav-link{
     display: flex;
 }
@@ -21,4 +24,17 @@ nav{
 }
 .nav-link li a:hover{
     color: #4e3620;
+}
+
+/* media query */
+@media only screen and (max-width: 600px){
+    .logo{
+        margin: 0;
+    }
+    .nav-link li{
+        margin-right: 13px;
+    }
+    .nav-link li a{
+        font-size: 15px;
+    }
 }
