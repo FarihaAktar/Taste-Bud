@@ -14,7 +14,7 @@ const Breakfast = () => {
                     <div className='breakfast-img-box'>
                         <img className='breakfast-image' src={mealImageURL} alt="" />
                     </div>
-                    <h3 className='meal-name'>{mealName}</h3>
+                    <h5 className='meal-name'>{mealName}</h5>
                     <p className='price'>${price}</p>
                 </Link>
             </div>

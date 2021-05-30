@@ -11,7 +11,7 @@ const AllMenu = (props) => {
                 <div className='all-meal-img-box'>
                     <img className='all-meal-img' src={mealImageURL} alt="" />
                 </div>
-                <h3>{mealName}</h3>
+                <h5>{mealName}</h5>
                 <p>{price}</p>
             </Link>
         </div>
