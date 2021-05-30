@@ -36,8 +36,14 @@ function App() {
           <PrivateRoute path="/admin">
             <Admin />
           </PrivateRoute>
+<<<<<<< HEAD
           <Route path="/meal/:mealId" component={MealDetail} />   
           <PrivateRoute path="/order/:id" component={Checkout} />   
+=======
+          <Route path="/meal/:mealId" component={MealDetail} />
+          <PrivateRoute path="/order/:id" component={Checkout} />
+
+>>>>>>> main
         </Switch>
       </Router>
 
