@@ -1,24 +1,51 @@
 import './App.css';
 import HomePage from './components/reactComponents/HomePage/HomePage';
-import MealDetail from './components/reactComponents/MealDetail/MealDetail'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-
+import { createContext, useEffect, useState } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import AddService from './components/Admin/AddService/AddService';
+import ManageService from './components/Admin/ManageService/ManageService';
+import MakeAdmin from './components/Admin/MakeAdmin/MakeAdmin';
+import Login from './components/Login/Login';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Admin from './components/Admin/Admin';
+import { MealReducer } from './components/Redux/Reducers/MealReducer';
+export const UserContext = createContext()
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({})
+  console.log('data is ', loggedInUser);
   return (
-    <div>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Switch>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+
+          <Route path="/login">
+            <Login />
+          </Route>
+          <PrivateRoute path="/addService">
+            <AddService />
+          </PrivateRoute>
+          <PrivateRoute path="/manageService">
+            <ManageService />
+          </PrivateRoute>
+          <PrivateRoute path="/makeAdmin">
+            <MakeAdmin />
+          </PrivateRoute>
+          <PrivateRoute path="/admin">
+            <Admin />
+          </PrivateRoute>
           <Route exact path="/" component={HomePage} />
-          <Route path="/meal/:mealId" component={MealDetail} />
+          <Route path="/meal/:mealId" component={MealReducer} />   
+
         </Switch>
       </Router>
 
-    </div>
+
+
+
+    </UserContext.Provider>
   );
 }
 
