@@ -11,8 +11,10 @@ const Breakfast = () => {
         return (
             <div className='breakfast-meal'>
                 <Link to={`/meal/${id}`}>
-                    <img className='breakfast-image' src={mealImageURL} alt="" />
-                    <h4 className='meal-name'>{mealName}</h4>
+                    <div className='breakfast-img-box'>
+                        <img className='breakfast-image' src={mealImageURL} alt="" />
+                    </div>
+                    <h3 className='meal-name'>{mealName}</h3>
                     <p className='price'>${price}</p>
                 </Link>
             </div>

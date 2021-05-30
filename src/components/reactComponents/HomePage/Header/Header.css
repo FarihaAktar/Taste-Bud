@@ -38,3 +38,31 @@ header{
     font-size: 40px;
     color: #fff;
 }
+
+@media only screen and (min-width: 2000px){
+    .header-logo-box{
+        height: 33%;
+    }
+    .header-box{
+        height: 300px;
+    }
+}
+
+/* media query */
+@media only screen and (max-width: 600px){
+    header{
+        min-height: 1550px;
+    }
+    .header-img{
+        height: 700px; 
+    }
+    .header-detail{
+        display: flex;
+        flex-direction: column;
+    }
+    .header-box{
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}

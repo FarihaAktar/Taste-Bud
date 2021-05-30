@@ -10,8 +10,11 @@
     text-decoration: none;
     color: black;
 }
+.all-meal-img-box{
+    height: 84%;
+}
 .all-meal-img{
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    height: 270px;
     object-fit: cover;
 }

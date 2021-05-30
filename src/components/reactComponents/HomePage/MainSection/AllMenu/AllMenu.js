@@ -8,7 +8,9 @@ const AllMenu = (props) => {
 
         <div className='all-meal'>
             <Link to={`/meal/${id}`}>
-                <img className='all-meal-img' src={mealImageURL} alt="" />
+                <div className='all-meal-img-box'>
+                    <img className='all-meal-img' src={mealImageURL} alt="" />
+                </div>
                 <h3>{mealName}</h3>
                 <p>{price}</p>
             </Link>
