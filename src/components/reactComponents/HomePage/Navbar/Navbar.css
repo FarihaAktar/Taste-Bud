@@ -8,7 +8,7 @@ nav{
     margin-left: 20px;
 }
 .nav-link{
-    display: flex;
+    display: flex !important;
 }
 .nav-link li{
     margin-right: 40px;

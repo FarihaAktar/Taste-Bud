@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Menu.css';
 import fakeData from '../../../../../FakeData/MOCK_DATA.json';
 import Breakfast from '../Breakfast/Breakfast';
@@ -6,13 +6,15 @@ import Lunch from '../Lunch/Lunch';
 import Dinner from '../Dinner/Dinner'
 import { setMeal, setBreakfastMenu, setLunchMenu, setDinnerMenu, removeMenu } from '../../../../Redux/Actions/MealActions'
 import { useDispatch, useSelector } from 'react-redux';
+import AllMenu from '../AllMenu/AllMenu';
 
 
 const Menu = () => {
     const dispatch = useDispatch()
     const meals = useSelector((state) => {
-        // console.log(state.meals.setMenu)
+        return state.meals.setMenu
     })
+    useEffect(() => dispatch(setMeal(fakeData)), [dispatch])
     // const [menu, setMenu] = useState([])
     // const [breakfastData, setBreakfastData] = useState([])
     // const [lunchData, setLunchData] = useState([])
@@ -21,7 +23,7 @@ const Menu = () => {
 
     const handleMeal = (food) => {
         // console.log(fakeData)
-        dispatch(setMeal(fakeData))
+        // dispatch(setMeal(fakeData))
         if (food === "Breakfast") {
             // let dayMeal = [...breakfastData]
             // let dayMeal = [...menu]
@@ -69,10 +71,13 @@ const Menu = () => {
                 <button className='menu-btn' onClick={() => handleMeal("Dinner")}>Dinner</button>
             </div>
             <div className='menu'>
+                {
+                    meals.map(meal => <AllMenu key={meal.id} meal={meal}></AllMenu>)
+                }
                 <Breakfast></Breakfast>
                 <Lunch></Lunch>
                 <Dinner></Dinner>
-                
+
             </div>
         </div>
     );
