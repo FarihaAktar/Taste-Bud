@@ -11,7 +11,7 @@ nav{
     color: #f54748;
 }
 .nav-link{
-    display: flex;
+    display: flex !important;
 }
 .nav-link li{
     margin-right: 40px;
