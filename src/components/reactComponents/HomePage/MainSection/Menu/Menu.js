@@ -10,10 +10,11 @@ import AllMenu from '../AllMenu/AllMenu';
 
 
 const Menu = () => {
-    const dispatch = useDispatch()
     const meals = useSelector((state) => {
-        return state.meals.setMenu
+        return state.meals.setMenu;
     })
+    const dispatch = useDispatch()
+    
     useEffect(() => dispatch(setMeal(fakeData)), [dispatch])
   
 

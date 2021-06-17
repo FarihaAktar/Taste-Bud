@@ -2,8 +2,7 @@ const initialState = {
     setMenu:[],
     breakfastMenu : [],
     lunchMenu : [],
-    dinnerMenu : [],
-    selectedMeals : []
+    dinnerMenu : []
 }
 
 export const MealReducer = (state = initialState, action)=>{
